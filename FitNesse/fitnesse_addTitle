@@ -1,0 +1,9 @@
+|testy.fitnesse_addTitle                                      |
+|dane                         |danei   |addTitle?|titleAmount?|
+|Matrix, idk, idk             |1999, 10|true     |1           |
+|Wladca Pierscienia, idk ,idk |2002, 5 |true     |2           |
+|Matrix, idk, idk             |1992, 5 |false    |2           |
+|Siedem, idk,idk              |1997, 12|true     |3           |
+|Oldboy, aa, aa               |2002, 5 |true     |4           |
+|Wladca Pierscienia, idk , idk|2003, 5 |fales    |4           |
+|Siedem, idk, idk             |2002, 10|false    |4           |

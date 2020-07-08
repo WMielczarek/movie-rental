@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditOdcinkiTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditOdcinkiLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{odcinkiController.selected.id}" title="#{bundle.EditOdcinkiTitle_id}" required="true" requiredMessage="#{bundle.EditOdcinkiRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditOdcinkiLabel_tytul}" for="tytul" />
+                    <h:inputText id="tytul" value="#{odcinkiController.selected.tytul}" title="#{bundle.EditOdcinkiTitle_tytul}" required="true" requiredMessage="#{bundle.EditOdcinkiRequiredMessage_tytul}"/>
+                    <h:outputLabel value="#{bundle.EditOdcinkiLabel_idSerial}" for="idSerial" />
+                    <h:selectOneMenu id="idSerial" value="#{odcinkiController.selected.idSerial}" title="#{bundle.EditOdcinkiTitle_idSerial}" required="true" requiredMessage="#{bundle.EditOdcinkiRequiredMessage_idSerial}">
+                        <f:selectItems value="#{serialeController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{odcinkiController.update}" value="#{bundle.EditOdcinkiSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditOdcinkiViewLink}"/>
+                <br />
+                <h:commandLink action="#{odcinkiController.prepareList}" value="#{bundle.EditOdcinkiShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditOdcinkiIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

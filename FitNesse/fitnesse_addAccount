@@ -1,0 +1,10 @@
+|testy.fitnesse_addAccount                           |
+|dane                    |addAccount ?|accountAmount?|
+|Wojtek,Mielczarek,aa    |true        |1             |
+|Artur,Schulz,bb         |true        |2             |
+|Wojtek,Mielczarek,aa    |true        |3             |
+|Jacek,Kowalski,kk       |true        |4             |
+|Klaudia,Szumilska,cc    |true        |5             |
+|Klaudia,Szumilska,cc    |true        |6             |
+|Wojtek,Makulski,mmmadw  |true        |7             |
+|Klaudia,Mielczarek,adras|true        |8             |
